@@ -1,0 +1,748 @@
+@use "./mixin.scss" as *;
+@import "./fonts.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container{
+    max-width: 1140px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+    
+}   
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: url(../images/bodyBg2.jpg) no-repeat center/cover;
+    font-family: "Kanit-Bold";
+    user-select: none;
+    color: white;
+}
+
+.circle{
+    background: #12F7D6;
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: -255px;
+    right: -545px;
+    border-radius: 50%;
+    z-index: -1;
+    @include media (768px) {
+        width: 400px;
+        height: 400px;
+        top: -100px;
+        right: -200px;
+    }
+    @include media (580px) {
+        width: 200px;
+        height: 200px;
+        top: -50px;
+        right: -100px;
+    }
+}
+
+.circle2{
+    background: white;
+    width: 300px;
+    height: 300px;
+    z-index: -1;
+    position: absolute;
+    top: 290px;
+    left: -350px;
+    border-radius: 50%;
+}
+
+.header{
+    background: rgba(0, 0, 0, 0.425);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        @include media (768px) {
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 15px;
+        }
+
+        &-profile{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            p{
+                font-family: "Kanit", sans-serif;
+                font-size: 30px;
+                font-weight: 600;
+                color: white;
+
+                span{
+                    color: #12F7D6;
+                    font-family: "Kanit", sans-serif;
+                    font-size: 30px;
+                    font-weight: 600;
+                    @include media (1200px) {
+                        font-size: clamp(0.938rem, 0.597rem + 1.7vw, 1.875rem);
+                    }
+                }
+                @include media (1200px) {
+                    font-size: clamp(0.938rem, 0.597rem + 1.7vw, 1.875rem);
+                }
+            }
+        }
+
+        &-nav{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            @include media (992px) {
+                gap: 20px;
+            }
+            @include media (840px) {
+                gap: 10px;
+            }
+            
+            
+        
+
+            &-btn-item{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                a{
+                    color: white;
+                    font-family: "Kanit", sans-serif;
+                    font-size: 18px;
+                    font-weight: 300;
+                    transition: 0.3s;
+                    @include media (768px) {
+                        font-size: clamp(0.5rem, 0.273rem + 1.14vw, 1.125rem);
+                    }
+                }
+            }
+            &-btn-item:hover a{
+                color: #12F7D6;
+                text-shadow: white 0px 5px 30px ;
+            }
+            &-langBtn{
+                background: rgba(255, 0, 0, 0);
+                border: none;
+                border-radius: 50%;
+
+                img{
+                    width: 30px;
+                    height: auto;
+                    cursor: pointer;
+                    @include media (380px) {
+                        width: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.banner{
+    padding: 220px 0 100px;
+    overflow: hidden;
+    @include media (480px) {
+        padding: 160px 0 50px;
+    }
+
+    
+    &__wrap{
+        display: flex;
+        align-items: center;
+        gap: 128px;
+        @include media (992px) {
+            gap: 50px;
+        }
+        @include media (480px) {
+            gap: 20px;
+        }
+
+        &-card{
+            padding: 37px 0;
+            border: 2px solid white;
+            border-radius: 150px 0 100px 0;
+            border-right: #12F7D6 solid 3px;
+            border-bottom: #12F7D6 solid 3px;
+            width: 400px;
+            height: 450px;
+            @include media (768px) {
+                width: 180px;
+                height: 350px;
+                border-radius: 120px 0 80px 0;
+            }
+            @include media (480px) {
+                width: 100px;
+                height: 200px;
+                border-radius: 80px 0 50px 0;
+            }
+            
+
+            &-top{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img{
+                    width: 100px;
+                    height: auto;
+                    background: white;
+                    border-radius: 50%;
+                    border: #12F7D6 solid 2px;
+                    @include media (768px) {
+                        width: 65px;
+                    }
+                    @include media (480px) {
+                        width: 30px;
+                    }
+                }
+
+                h3{
+                    font-family: "Kanit", sans-serif;
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: white;
+                    @include media (768px) {
+                        font-size: clamp(0.625rem, 0.398rem + 1.14vw, 1.25rem);
+                    }
+                }
+
+                p{
+                    font-family: "Kanit", sans-serif;
+                    font-size: 15px;
+                    font-weight: 300;
+                    color: #12F7D6;
+                    @include media (768px) {
+                        font-size: clamp(0.438rem, 0.256rem + 0.91vw, 0.938rem);
+                    }
+                }
+            }
+
+            &-bottom{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                @include media (768px) {
+                    gap: 10px;
+                }
+
+                &-info{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    font-family: "Kanit", sans-serif;
+                    font-size: 16px;
+                    font-weight: 400;
+                    @include media (768px) {
+                        gap: 10px;
+                        font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
+                    }
+                    @include media (480px) {
+                        font-size: clamp(0.438rem, 0.278rem + 0.8vw, 0.875rem);
+                        gap: 3px;
+                    }
+
+                    &-item{
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        @include media (768px) {
+                            gap: 10px;
+                        }
+                        @include media (480px) {
+                            gap: 5px;
+                        }
+
+                        img{
+                            width: 30px;
+                            height: 30px;
+                            @include media (480px) {
+                                width: 15px;
+                                height: 15px;
+                            }
+                        }
+                    }
+                }
+
+                &-skils{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    @include media (768px) {
+                        gap: 5px; 
+                    }
+
+                    p{
+                        background: #12F7D6;
+                        width: 45px;
+                        height: 15px;
+                        text-align: center;
+                        color: black;         
+                        font-family: "Ubuntu", sans-serif;
+                        font-size: 12px;
+                        font-weight: 700;      
+                        border-radius: 10px;     
+                        @include media (768px) {
+                            font-size: clamp(0.625rem, 0.58rem + 0.23vw, 0.75rem);
+                            width: 40px;
+                            height: 12px;
+                        }
+                        @include media (480px) {
+                            font-size: clamp(0.313rem, 0.153rem + 0.8vw, 0.75rem);
+                            width: 20px;
+                            height: 6px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-desc{
+            display: flex;
+            flex-direction: column;
+            
+            span{
+                color: #12F7D6;
+            }
+
+            h1{
+                font-family: "Ubuntu", sans-serif;
+                font-size: 45px;
+                font-weight: 400;
+                @include media (992px) {
+                    font-size: clamp(0.938rem, 0.256rem + 3.41vw, 2.813rem);
+                }
+            }
+
+            p{
+                margin-top: 30px;
+                font-family: "Kanit", sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                @include media (992px) {
+                    font-size: clamp(0.313rem, -0.142rem + 2.27vw, 1.563rem);
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+.aboutMe{
+    background: url(../images/BG.gif) no-repeat center/cover;
+    padding: 50px 0 ;
+
+    &__wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        @include media (768px) {
+            flex-direction: column;
+        }
+
+        &-desc{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            &-title{
+                color: white;
+                font-family: "Ubuntu", sans-serif;
+                font-size: 28px;
+                font-weight: 500;
+                background: #292F36;
+                border: 2px solid #12F7D6;
+                width: auto;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 25px 0 25px 0;
+                @include media (992px) {
+                    font-size: clamp(0.938rem, 0.642rem + 1.48vw, 1.75rem);
+                }
+
+                &-text{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    background: #292F36;
+                    padding: 10px 10px;
+                    border-radius: 25px;
+
+                    &-item{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        justify-content: center;
+                        
+                        p{
+                            font-family: "Ubuntu", sans-serif;
+                            font-size: 16px;
+                            font-weight: 400;
+                            @include media (992px) {
+                                font-size: clamp(0.625rem, 0.489rem + 0.68vw, 1rem);
+                            }
+                        }
+
+                        span{
+                            color: #12F7D6;
+                            font-family: "Ubuntu", sans-serif;
+                            font-size: 25px;
+                            font-weight: 500;
+                            margin-top: 15px;
+                            @include  media (992px) {
+                                font-size: clamp(0.75rem, 0.455rem + 1.48vw, 1.563rem);
+                            }
+                        }
+                    }
+                    h2{
+                        color: #12F7D6;
+                        font-family: "Ubuntu", sans-serif;
+                        font-size: 30px;
+                        font-weight: 500;
+                        @include media (992px) {
+                            font-size: clamp(1rem, 0.682rem + 1.59vw, 1.875rem);
+                        }
+                    }
+                }
+            }
+        }
+
+        img{
+            width: 50%;
+            height: auto;
+            border-radius: 50%;
+            background: #292F36;
+            border: #12F7D6 solid 3px;
+        }
+    }
+}
+
+.skills{
+    padding: 100px 0;
+    @include media (480px) {
+        padding: 40px 0;
+    }
+
+    &__wrap{
+        display: flex;
+        flex-direction: column;
+        
+        
+        &-title{
+            font-family: "Kanit", sans-serif;
+            font-size: 45px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            background: #292f366d;
+            border-radius: 25px;
+            padding: 0 15px;
+            text-align: center;
+            max-width: 280px;
+            width: 100%;
+            @include media (992px) {
+                font-size: clamp(1.25rem, 0.682rem + 2.84vw, 2.813rem);
+            }
+            @include media (560px) {
+                max-width: 200px;
+            }
+        }
+        &-cards{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            grid-auto-rows: 260px;
+            @include media (1150px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include media (550px) {
+                grid-template-columns: repeat(1, 1fr);
+                grid-auto-rows: 180px;
+            }
+
+            &-card{
+                background: rgba(0, 0, 0, 0.121);
+                backdrop-filter: blur(8px);
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 10px;
+                padding: 10px;
+                border-radius: 10px;
+                transition: 0.3s ease;
+                position: relative;
+                overflow: hidden;
+
+                &-title{
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    gap: 20px;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(132deg, rgba(0,0,0,0) 0%, rgba(255,251,251,0.1416783707865169) 100%);
+                    transition: opacity 0.5s ease;
+                    opacity: 0;
+                    z-index: 1;
+                }
+                &:hover::before {
+                    opacity: 1;
+                }
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 0;
+                }
+
+                h3{
+                    font-family: "Ubuntu", sans-serif;
+                    font-size: 28px;
+                    font-weight: 500;
+                    color: white;
+                    @include media (650px) {
+                        font-size: clamp(1rem, 0.727rem + 1.36vw, 1.75rem);
+                    }
+                }
+
+                img{
+                    width: 70px;
+                    height: 70px;
+                }
+
+                p{
+                    font-family: "Kanit", sans-serif;
+                    font-weight: 400;
+                    font-size: 13px;
+                    @include media (650px) {
+                        font-size: clamp(0.625rem, 0.557rem + 0.34vw, 0.813rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.works{
+    padding: 20px 0;
+
+    &__wrap{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        &-title{
+            font-family: "Kanit", sans-serif;
+            font-size: 35px;
+            font-weight: 700;
+            background: #292F36;
+            padding: 0px 10px;
+            border: #12F7D6 2px solid;
+            border-radius: 25px 0 25px 0;
+            width: 155px;
+            text-align: center;
+            @include media (580px) {
+                font-size: clamp(1.25rem, 0.909rem + 1.7vw, 2.188rem);
+            }
+        }
+
+        &-desc{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            &-item{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 3%;
+                border-bottom: #12F7D6 solid 1px;
+                padding-bottom: 20px;
+
+                &-text{
+                    font-family: "Ubuntu", sans-serif;
+                    font-size: 18px;
+                    font-weight: 400;
+                    text-align: center;
+                    @include media (768px) {
+                        font-size: clamp(0.5rem, 0.273rem + 1.14vw, 1.125rem);
+                    }
+                }
+
+                img{
+                    width: 50%;
+                    height: auto;
+                }
+            }
+        }
+        &-text{
+            font-family: "Ubuntu", sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: center;
+            @include media (768px) {
+                font-size: clamp(0.5rem, 0.273rem + 1.14vw, 1.125rem)
+            }
+            
+    
+            a{
+                color: #12F7D6;
+            }
+        }
+        
+    }
+}
+
+.contact{
+    background: #292F36;
+    padding: 100px 0 0;
+
+    &__wrap{
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        @include media (580px) {
+            gap: 50px;
+        }
+
+        &-title{
+            font-family: "Kanit", sans-serif;
+            font-size: 35px;
+            font-weight: 700;
+            background: #292F36;
+            padding: 0px 10px;
+            border: #12F7D6 2px solid;
+            border-radius: 25px 0 25px 0;
+            width: 155px;
+            text-align: center;
+            @include media (580px) {
+                font-size: clamp(1.25rem, 0.909rem + 1.7vw, 2.188rem);
+            }
+        }
+
+        &-btns{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            border-top: #12F7D6 solid 1px;
+            border-bottom: #12F7D6 solid 1px;
+            padding: 100px 0;
+            @include media (580px) {
+                padding: 50px 0;
+                gap: 25px;
+            }
+
+            &-btn{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                width: 400px;
+                height: 80px;
+                justify-content: space-between;
+                padding: 15px;
+                border-radius: 8px;
+                border: white solid 1px;
+                transition: 0.3s;
+                @include media (580px) {
+                    width: 300px;
+                    height: 60px;
+                }
+
+                img{
+                    width: 50px;
+                    @include media (580px) {
+                        width: 30px;
+                    }
+                }
+
+                p{
+                    color: white;
+                    font-family: "Kanit", sans-serif;
+                    font-weight: 400;
+                    font-size: 20px;
+                    transition: 0.3s;
+                }
+            }
+            &-btn:hover{
+                border: #12F7D6 solid 1px;
+                p{
+                    color: #12F7D6;
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+}
+
+.modal{
+    position: absolute;
+    top: 80px;
+    right: 0px;
+
+    &__wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+        gap: 10px;
+        background: rgba(0, 0, 0, 0.549);
+
+        &-lang{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+
+            img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+.borderbottom{
+    border-bottom: #12F7D6 solid 1px;
+    padding-bottom: 10px;
+}
