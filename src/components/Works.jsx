@@ -17,18 +17,18 @@ const Works = () => {
           <div className="works__wrap-desc">
             <div className="works__wrap-desc-item">
               <img src={zoneGif} alt="" />
-              <p className='works__wrap-desc-item-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime provident dolorum magnam sint obcaecati odio ullam eum temporibus distinctio. Repellendus magnam praesentium corporis eum temporibus culpa incidunt. Nesciunt esse eligendi consequuntur nostrum quam, laboriosam aperiam! Magnam, ipsam</p>
+              <p className='works__wrap-desc-item-text'>{t("zone")}</p>
             </div>
             <div className="works__wrap-desc-item">
-              <p className='works__wrap-desc-item-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime provident dolorum magnam sint obcaecati odio ullam eum temporibus distinctio. Repellendus magnam praesentium corporis eum temporibus culpa incidunt. Nesciunt esse eligendi consequuntur nostrum quam, laboriosam aperiam! Magnam, ipsam</p>
+              <p className='works__wrap-desc-item-text'>{t("nike")}</p>
               <img src={nike} alt="" />
             </div>
             <div className="works__wrap-desc-item">
               <img src={blueColar} alt="" />
-              <p className='works__wrap-desc-item-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime provident dolorum magnam sint obcaecati odio ullam eum temporibus distinctio. Repellendus magnam praesentium corporis eum temporibus culpa incidunt. Nesciunt esse eligendi consequuntur nostrum quam, laboriosam aperiam! Magnam, ipsam</p>
+              <p className='works__wrap-desc-item-text'>{t("blueCollar")}</p>
             </div>
             <div className="works__wrap-desc-item">
-              <p className='works__wrap-desc-item-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime provident dolorum magnam sint obcaecati odio ullam eum temporibus distinctio. Repellendus magnam praesentium corporis eum temporibus culpa incidunt. Nesciunt esse eligendi consequuntur nostrum quam, laboriosam aperiam! Magnam, ipsam</p>
+              <p className='works__wrap-desc-item-text'>{t("crypAppy")}</p>
               <img src={cryp} alt="" />
             </div>
           </div>

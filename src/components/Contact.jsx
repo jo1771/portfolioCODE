@@ -27,7 +27,7 @@ const Contact = () => {
                 <p className='contact__wrap-btns-btn-text'>Email</p>
                 <img className='contact__wrap-btns-btn-img' src={email} alt="" />
               </a>
-              <a href="https://discord.gg/Zbs3CqVn" target='_blank' className="contact__wrap-btns-btn">
+              <a href="https://discord.gg/2uZuGwU2" target='_blank' className="contact__wrap-btns-btn">
                 <p className='contact__wrap-btns-btn-text'>Discord</p>
                 <img className='contact__wrap-btns-btn-img' src={discord} alt="" />
               </a>
