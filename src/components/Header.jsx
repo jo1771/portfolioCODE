@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import arrowToDown from "../assets/images/arrowToDown.svg";
 import profile2 from "../assets/images/profile2.png"
 import location from "../assets/images/location.svg"
 import call from "../assets/images/call.svg"
@@ -63,7 +62,7 @@ const Header = () => {
                         <div className="banner__wrap-card-bottom-info">
                             <div className="banner__wrap-card-bottom-info-item">
                                 <img src={call} alt="" />
-                                <p>+998 (94) 618-12-95</p>
+                                <p>+998(94)618-12-95</p>
                             </div>
                             <div className="banner__wrap-card-bottom-info-item">
                                 <img src={age} alt="" />

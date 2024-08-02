@@ -1,10 +1,4 @@
-import { useState } from 'react'
 import React from 'react'
-import windowIcon from "./assets/images/window.svg";
-import aboutMeIcon from "./assets/images/aboutMe.svg"
-import skils from "./assets/images/skils.svg"
-import myWorks from "./assets/images/myWorks.svg"
-import contact from "./assets/images/contact.svg"
 import Header from './components/Header'
 import AboutMe from './components/AboutMe'
 import Skills from './components/Skills'
