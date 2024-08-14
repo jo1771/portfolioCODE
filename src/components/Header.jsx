@@ -20,6 +20,7 @@ const Header = () => {
     const NavOpen = () => {
         setIsNavOpen(!isNavOpen);
         setIsBurgerOrCross(!isBurgerOrCross);
+        setIsModalOpen(false)
     };
     
     return (
@@ -98,12 +99,12 @@ const Header = () => {
                                     <p>{t("location")}</p>
                                 </div>
                             </div>
-                            <div className="banner__wrap-card-bottom-skils">
+                            {/* <div className="banner__wrap-card-bottom-skils">
                                 <p>HTML5</p>
                                 <p>SCSS</p>
                                 <p>JS</p>
                                 <p>REACT</p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="banner__wrap-desc">
