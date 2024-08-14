@@ -45,7 +45,7 @@ body{
         top: -100px;
         right: -200px;
     }
-    @include media (500px) {
+    @include media (550px) {
         width: 200px;
         height: 200px;
         top: -50px;
@@ -439,7 +439,7 @@ body{
 }
 
 .aboutMe{
-    background: url(../images/BG.gif) no-repeat center/cover;
+    background: url(../images/bg.jpg) no-repeat center/cover;
     padding: 50px 0 ;
     @include media (480px) {
         padding: 25px 0;
